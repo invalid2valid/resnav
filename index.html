@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="md:mx-12 m-4 relative"> 
+        
+            <span id="openHambarger" class="material-symbols-outlined md:hidden">
+                menu
+                </span>
+                
+        
+        <div class=" md:hidden absolute -left-96 w-full text-center transition-all " id="closeHambarger">
+            <div class="flex flex-col text-center gap-2">
+                <span class="text-left material-symbols-outlined">
+                    menu_open
+                </span>
+        <a class="hover:text-red-600 transition-colors" href="#">Home</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/about.html">About</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/services.html">Services</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/contact.html">Contact</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/portfolio.html">Portfolio</a>
+        </div>
+        </div>
+        <div class="hidden md:flex justify-evenly ">
+        <a class="hover:text-red-600 transition-colors" href="#">Home</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/about.html">About</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/services.html">Services</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/contact.html">Contact</a>
+        <a class="hover:text-red-600 transition-colors" href="./Pages/portfolio.html">Portfolio</a>
+        </div>
+    </header>
+
+    <script>
+        const   openHambarger = document.getElementById("openHambarger")
+        const   closeHambarger = document.getElementById("closeHambarger")
+        
+        function handleNavToOpen() {
+            
+            
+            closeHambarger.classList.remove("-left-96");
+            openHambarger.classList.add("hidden");
+            
+            
+        }
+        function handleNavToClose(){
+            closeHambarger.classList.add("-left-96");
+            openHambarger.classList.remove("hidden");
+        }
+        openHambarger.addEventListener('click',handleNavToOpen)
+        closeHambarger.addEventListener('click',handleNavToClose)
+        </script>
+</body>
+</html>
